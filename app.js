@@ -12,8 +12,8 @@ const indexNav = [
     { link: "/signup", name: "SignIn" },
 ];
 const users = [
-    { uname: "admin1", password: "1234" },
-    { uname: "Sreejith", password: "12345" },
+    { uname: "admin", password: "12345" },
+    { uname: "newname", password: "1234" },
 ];
 
 var bodyParser = require("body-parser");
