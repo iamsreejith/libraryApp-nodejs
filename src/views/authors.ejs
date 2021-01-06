@@ -1,0 +1,33 @@
+<%- include("header") -%>
+    <h1 style="text-align: center;">
+        <%=title%>
+    </h1>
+
+    <div class="container" style="margin: 2% 0 0 0;">
+
+
+        <!-- cards -->
+        <%for(i=0; i<authors.length; i++){%>
+            <div class="card cont-one mb-3 mx-auto auth-card" style="max-width: 540px; padding: 10px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img style="height: 200px; width: 200px;" src="<%=authors[i].img%>" alt="...">
+                    </div>
+                    <div class="col-md-8" style="padding: 10px 10px 10px 20px;">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <%=authors[i].name%>
+                            </h5>
+                            <p class="card-text">
+                                <%=authors[i].about%>
+                            </p>
+                            <a class="btn btn-primary" href="/authors/<%=i%>">Read more</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <%}%>
+    </div>
+    <%- include("footer") -%>

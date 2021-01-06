@@ -1,0 +1,33 @@
+<%- include("header") -%>
+    <div class="container cont-one ">
+        <div class="home-heading">
+            <h2 class="text-center">Books Available</h2>
+        </div>
+        <div class="books-content d-flex justify-content-evenly">
+
+            <%for(i=0; i<books.length; i++){%>
+                <div class="card cont-one " style="width: 18rem;">
+                    <img style="height: 200px;" src="<%=books[i].img%>" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <%=books[i].title%>
+                        </h5>
+                        <p class="card-text">
+                            <%=books[i].about%>
+                        </p>
+                        <p class="fst-italic">
+                            <%=books[i].genre%>
+                        </p>
+                        <p class="fst-normal"><b>Author:</b>
+                            <a style="text-decoration: none; color: black;" href="/authors/<%=i%>">
+                                <%=books[i].author%>
+                            </a>
+                        </p>
+                        <a href="/books/<%=i%>" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+                <%}%>
+
+        </div>
+    </div>
+    <%- include("footer") -%>
