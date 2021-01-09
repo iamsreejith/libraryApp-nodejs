@@ -2,7 +2,7 @@
 
     <div class="container">
         <div class="home-heading">
-            <h2 class="text-center">Books Available</h2>
+            <h2 class="text-center"><%=book.title%></h2>
         </div>
         <div class="books-content d-flex justify-content-evenly">
 
@@ -17,9 +17,7 @@
             padding: 10px;">
                 <img class="mx-auto" style="height: 200px; width: 300px; margin:3% 0 0 0%;" src="<%=book.img%>" class="card-img-top">
                 <div class="card-body">
-                    <h5 class="card-title">
-                        <%=book.title%>
-                    </h5>
+                    
                     <p class="card-text">
                         <%=book.details%>
                     </p>

@@ -1,5 +1,6 @@
 const express = require("express");
 const app = new express();
+const port = process.env.PORT || 5005 ;
 
 const navbar = [
     { link: "/books", name: "Books" },
@@ -58,4 +59,7 @@ app.post("/", function(req, res) {
         res.redirect("/");
     }
 });
-app.listen(5000);
+app.listen(port , ()=> {
+
+    console.log("server ready at "+ port);
+});
